@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigBoy29 RD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background: radial-gradient(circle, #0b0c10, #1a1a1d);
+            color: #d4e4f4;
+            overflow-x: hidden;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3a8dad;
+            z-index: 1000;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #74c7ed;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out, transform 0.3s;
+        }
+
+        header nav a:hover {
+            color: #d4e4f4;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1a1a1d, #0b0c10);
+            color: #d4e4f4;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(58, 141, 173, 0.2), transparent);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                opacity: 0.3;
+            }
+            to {
+                opacity: 0.7;
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #74c7ed;
+            text-shadow: 0 0 10px #3a8dad, 0 0 20px #74c7ed;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #74c7ed;
+            box-shadow: 0 0 15px #74c7ed;
+            animation: float 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #0b0c10;
+            background-color: #74c7ed;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(116, 199, 237, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(116, 199, 237, 0.8);
+            background-color: #d4e4f4;
+            color: #0b0c10;
+        }
+
+        .resources {
+            text-align: center;
+            padding: 50px 20px;
+            background: #0b0c10;
+            color: #d4e4f4;
+            border-top: 2px solid #3a8dad;
+        }
+
+        .resources h2 {
+            font-size: 2.5rem;
+            color: #74c7ed;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #3a8dad;
+        }
+
+        .resource-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .resource-box {
+            background-color: #1a1a1d;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(58, 141, 173, 0.4);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .resource-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(58, 141, 173, 0.6);
+        }
+
+        .resource-box img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .resource-box h3 {
+            margin: 10px 0;
+            color: #74c7ed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0b0c10;
+            color: #74c7ed;
+            border-top: 2px solid #3a8dad;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div><a href="#hero">BigBoy29 RD</a></div>
+            <div>
+                <a href="#hero">Home</a>
+                <a href="#resources">Resources</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <h1>BigBoy29 RD</h1>
+        <p>Welcome To My Website</p>
+        <img src="bigboy.jpg" alt="Avatar">
+        <div class="links">
+            <a href="https://discord.gg/5xUjGJcjqz" target="_blank">Join Discord Server</a>
+            <a href="https://www.youtube.com/@BigBoy29_RD" target="_blank">YouTube Channel</a>
+        </div>
+    </section>
+
+    <!-- New Resources Section -->
+    <section id="resources" class="resources section">
+        <h2>Clients, Toolboxes, Texture Packs, Minecraft</h2>
+        <div class="resource-boxes">
+            <div class="resource-box">
+                <img src="client.jpg" alt="Clients">
+                <h3>Clients</h3>
+                <p>Find top-notch Minecraft clients for optimized gameplay.</p>
+            </div>
+            <div class="resource-box">
+                <img src="toolbox.jpg" alt="Toolboxes">
+                <h3>Toolboxes</h3>
+                <p>toolbox.</p>
+            </div>
+            <div class="resource-box">
+                <img src="Texture.png" alt="Texture Packs">
+                <h3>Texture Packs</h3>
+                <p>Customize your Minecraft world with unique textures.</p>
+            </div>
+            <div class="resource-box">
+                <img src="minecraft.png" alt="Minecraft">
+                <h3>Minecraft</h3>
+                <p>Explore everything about Minecraft mods and updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 BigBoy29 RD | Made with ❤️ by Murtesa Gamer</p>
+    </footer>
+</body>
+</html>
+
